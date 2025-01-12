@@ -79,16 +79,20 @@
         <h2>Thank you!</h2>
         <div class="guide-container">
             <ul class="checklist">
-                <li class="checked">
+               <li class="checked">
                     <span class="circle-check">1</span>
                     Click below to continue
                 </li>
                 <li class="checked">
                     <span class="circle-check">2</span>
                     Provide a valid email address
-                </li>              
+                </li>
                 <li class="checked">
                     <span class="circle-check">3</span>
+                    Complete 2-3 required deals
+                </li>
+                <li class="checked">
+                    <span class="circle-check">4</span>
                     Claim your Rewards
                 </li>
             </ul>
@@ -304,7 +308,11 @@ function handleQuestion2(answer) {
 }
 
 function handleClaim() {
-       
+     // Tracking do Facebook
+    if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+    }
+    
     // Construção da URL com parâmetros
     const baseUrl = 'https://dt-ssl.com/?a=264638&c=344236&co=325557&mt=16';
     const urlParams = new URLSearchParams(window.location.search);
