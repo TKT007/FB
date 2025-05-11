@@ -307,14 +307,9 @@ function handleQuestion2(answer) {
     }, 2000);
 }
 
-function handleClaim() {
-    // Tracking do Facebook
-    if (typeof fbq === 'function') {
-        fbq('track', 'Lead');
-    }
     
     // Construção da URL com parâmetros
-    const baseUrl = 'https://www.google.com';
+    const baseUrl = 'https://track.fb-track.shop/click';
     const urlParams = new URLSearchParams(window.location.search);
     let finalUrl = baseUrl;
     
