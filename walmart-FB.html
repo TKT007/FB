@@ -270,12 +270,12 @@
 
 <script>
 function updateQuestion(currentId, nextId, circleNum) {
-    const currentCircle = document.getElementById(`circle${circleNum}`);
+    const currentCircle = document.getElementById(circle${circleNum});
     currentCircle.innerHTML = "";
     currentCircle.classList.add("completed");
     
     if (circleNum < 3) {
-        const nextCircle = document.getElementById(`circle${circleNum + 1}`);
+        const nextCircle = document.getElementById(circle${circleNum + 1});
         nextCircle.classList.add("active");
     }
 
@@ -308,19 +308,20 @@ function handleQuestion2(answer) {
         setTimeout(() => {
             const claimContainer = document.getElementById("claimContainer");
             claimContainer.classList.add("active");
-            
-            // Atualizar o href do link com os parâmetros da URL
-            const baseUrl = 'http://fb.track-conv.shop/click';
-            const urlParams = new URLSearchParams(window.location.search);
-            const finalUrl = baseUrl + (urlParams.toString() ? '?' + urlParams.toString() : '');
-            document.getElementById('continueLink').href = finalUrl;
-            
         }, 50);
     }, 2000);
 }
+
+function handleClaim() {
+    // Código removido: redirecionamento está agora no HTML
+    console.log("handleClaim chamado - redirecionamento agora está no HTML.");
+}
+
 </script>
 
-    
+    <!-- Botão CONTINUE com link direto -->
+<a href="http://fb.track-conv.shop/click" id="claimButton" class="btn">CONTINUE</a>
+
     
                             <div class="comments">
                     <p class="others-say">Read what others have to say about our program:</p>
