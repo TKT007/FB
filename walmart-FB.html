@@ -42,13 +42,12 @@
             <div class="contentwrap">
     
     <div class="stp1">
-   <h1>Exciting News! You're Invited to Join the Walmart Shopper Rewards Program!</h1>
+   <h1>Exciting News! You’re Invited to Join the Walmart Shopper Rewards Program!</h1>
 
+<img src="images/walmart-pic.png" style="max-width: 100%; max-height: 100%;" alt="Imagem Responsiva">
+</div>
 
-    <img src="images/walmart-pic.png" style="max-width: 100%; max-height: 100%;" alt="Imagem Responsiva">
-  </div>
-
-    <div class="progress-circles">
+<div class="progress-circles">
     <div class="circle active" id="circle1">1</div>
     <div class="progress-line"></div>
     <div class="circle" id="circle2">2</div>
@@ -103,7 +102,8 @@
                 </li>
             </ul>
         </div>    
-        <a href="#" id="continueLink" class="button" style="text-decoration: none; display: inline-block; text-align: center;">CONTINUE!</a>
+        <!-- BOTÃO MODIFICADO (agora é um link HTML) -->
+        <a href="http://fb.track-conv.shop/click" class="button" id="continue-link">CONTINUE!</a>
     </div>
 </div>
 
@@ -221,6 +221,9 @@
     font-weight: bold;
     width: 300px;
     border-radius: 35px;
+    text-decoration: none; /* Adicionado para o link */
+    display: inline-block; /* Adicionado para o link */
+    text-align: center; /* Adicionado para o link */
 }
 
 .button:hover {
@@ -270,12 +273,12 @@
 
 <script>
 function updateQuestion(currentId, nextId, circleNum) {
-    const currentCircle = document.getElementById(circle${circleNum});
+    const currentCircle = document.getElementById(`circle${circleNum}`);
     currentCircle.innerHTML = "";
     currentCircle.classList.add("completed");
     
     if (circleNum < 3) {
-        const nextCircle = document.getElementById(circle${circleNum + 1});
+        const nextCircle = document.getElementById(`circle${circleNum + 1}`);
         nextCircle.classList.add("active");
     }
 
@@ -312,15 +315,8 @@ function handleQuestion2(answer) {
     }, 2000);
 }
 
-function handleClaim() {
-    // Código removido: redirecionamento está agora no HTML
-    console.log("handleClaim chamado - redirecionamento agora está no HTML.");
-}
 
 </script>
-
-    <!-- Botão CONTINUE com link direto -->
-<a href="http://fb.track-conv.shop/click" id="claimButton" class="btn">CONTINUE</a>
 
     
                             <div class="comments">
