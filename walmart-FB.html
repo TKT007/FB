@@ -1,5 +1,11 @@
 <!DOCTYPE html><html lang="en"><head>
+<!--Optional, send client hints to get accurate device data-->
+<meta http-equiv="delegate-ch" content="sec-ch-ua https://f21adg.mcgo2.com; sec-ch-ua-mobile https://f21adg.mcgo2.com; sec-ch-ua-arch https://f21adg.mcgo2.com; sec-ch-ua-model https://f21adg.mcgo2.com; sec-ch-ua-platform https://f21adg.mcgo2.com; sec-ch-ua-platform-version https://f21adg.mcgo2.com; sec-ch-ua-bitness https://f21adg.mcgo2.com; sec-ch-ua-full-version-list https://f21adg.mcgo2.com; sec-ch-ua-full-version https://f21adg.mcgo2.com" />
 
+<!-- MaxConv Tracking Script Base Code-->
+<script>!function(w,d,o,n,c){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};var s=d.createElement(n),t=d.getElementsByTagName(n)[0];s.async=!0;s.defer=!0;s.src="https://f21adg.mcgo2.com/t/t.js";t.parentNode.insertBefore(s,t);}(window,document,"maxconv","script");</script>
+<noscript><link rel="stylesheet" href="https://f21adg.mcgo2.com/t/t.css?mc_ns=1" /></noscript>
+<!-- End MaxConv Tracking Script Base Code-->
 
     <link rel="stylesheet" href="/css/all.min.css">
         
@@ -307,7 +313,7 @@ function handleQuestion2(answer) {
 }
 
 function handleClaim() {
-    const baseUrl = 'https://track.fb-track.shop/click?';
+    const baseUrl = 'http://fb.track-conv.shop/click';
     const urlParams = new URLSearchParams(window.location.search);
     const finalUrl = baseUrl + urlParams.toString();
 
