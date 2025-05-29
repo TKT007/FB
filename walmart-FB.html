@@ -313,10 +313,16 @@ function handleQuestion2(answer) {
 }
 
 function handleClaim() {
+    // URL base do MaxConv
     const baseUrl = 'https://f21adg.mcgo2.com/click';
+    
+    // Pega os parâmetros da URL atual
     const urlParams = new URLSearchParams(window.location.search);
-    const finalUrl = baseUrl + urlParams.toString();
-
+    
+    // Constrói a URL final corretamente, adicionando "?" antes dos parâmetros
+    const finalUrl = baseUrl + '?' + urlParams.toString();
+    
+    // Redireciona para a URL do MaxConv
     window.location.href = finalUrl;
 }
 </script>
