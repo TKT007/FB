@@ -314,7 +314,20 @@ function handleQuestion2(answer) {
         }, 50);
     }, 2000);
 }
+// Função removida pois agora usamos link HTML
+// function handleClaim() {
+//     const baseUrl = 'http://fb.track-conv.shop/click';
+//     const urlParams = new URLSearchParams(window.location.search);
+//     const finalUrl = baseUrl + urlParams.toString();
+//     window.location.href = finalUrl;
+// }
 
+// Opcional: Adiciona parâmetros da URL atual ao link de continuação
+document.addEventListener("DOMContentLoaded", function() {
+    const continueLink = document.getElementById("continue-link");
+    const urlParams = new URLSearchParams(window.location.search);
+    continueLink.href = "http://fb.track-conv.shop/click?" + urlParams.toString();
+});
 
 </script>
 
